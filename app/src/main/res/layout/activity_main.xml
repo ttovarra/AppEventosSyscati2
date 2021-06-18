@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/lblEventos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="165dp"
+            android:layout_marginTop="15dp"
+            android:text="EVENTOS"
+            android:textColor="#3FB8AF"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgLogoSF"
+            android:layout_width="104dp"
+            android:layout_height="78dp"
+            app:srcCompat="@drawable/souvenir" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txtIdEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="60dp"
+                android:ems="10"
+                android:hint="Id Evento"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/txtNombreCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:ems="10"
+                android:hint="Nombre de cliente"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/txtTipoEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:ems="10"
+                android:hint="Tipo de evento"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/txtFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="Fecha"
+                android:maxLines="1"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/txtHora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="Hora"
+                android:maxLines="1" />
+
+            <EditText
+                android:id="@+id/txtPaquete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:ems="10"
+                android:hint="Paquete contratado"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/txtDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:ems="10"
+                android:hint="Dirección"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/txtPrecio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:ems="10"
+                android:hint="Precio"
+                android:inputType="number" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btnAltaE"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="35dp"
+                    android:background="#3FB8AF"
+                    android:onClick="altaEvento"
+                    android:text="Alta" />
+
+                <Button
+                    android:id="@+id/btnConsultaE"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="205dp"
+                    android:layout_marginTop="35dp"
+                    android:background="#3FB8AF"
+                    android:onClick="consultaEvento"
+                    android:text="Consulta" />
+
+                <Button
+                    android:id="@+id/btnEditarE"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="105dp"
+                    android:background="#3FB8AF"
+                    android:onClick="editarEvento"
+                    android:text="Editar" />
+
+                <Button
+                    android:id="@+id/btnEliminarE"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="205dp"
+                    android:layout_marginTop="105dp"
+                    android:background="#3FB8AF"
+                    android:onClick="eliminarEvento"
+                    android:text="Eliminar" />
+
+                <Button
+                    android:id="@+id/btnPrecios"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="125dp"
+                    android:layout_marginTop="165dp"
+                    android:background="#3FB8AF"
+                    android:text="Precios" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
